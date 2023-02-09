@@ -17,11 +17,7 @@ export default function TestCloud(){
         <div>
             <button className='apiCall' onClick={handleClick}> Call API </button>
             {
-                response[0].itemId,
-                response[0].itemName,
-                response[0].itemCategory,
-                response[0].itemDescription
-                //response[0].itemPrice
+                response[0].itemName
             }
         </div>
     )
