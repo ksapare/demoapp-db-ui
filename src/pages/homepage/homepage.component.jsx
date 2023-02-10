@@ -7,17 +7,6 @@ import { SearchBox } from '../../components/search-box/search-box.component';
 
 
 export default function HomePage() {
-
-    const [categories, setCategories] = useState([]);
-    const [searchField, setSearchField] = useState("")
-
-    useEffect(() => {
-
-        axios.get("http://localhost:8080/v1/category/")
-        .then((response) =>setCategories(response.data))
-
-    }, [])
-
     function handleChange(e) {
       setSearchField(e.target.value)
     }
@@ -28,14 +17,6 @@ export default function HomePage() {
               placeholder = 'search category'
               handleChange = { handleChange }
             />
-            <CardList 
-            categories={
-              categories.filter(
-                category => 
-                category.categoryName.toLowerCase()
-                .includes(searchField.toLowerCase())
-              )
-            } />
         </div>
     )
     
