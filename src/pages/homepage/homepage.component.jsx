@@ -7,15 +7,11 @@ import { SearchBox } from '../../components/search-box/search-box.component';
 
 
 export default function HomePage() {
-    function handleChange(e) {
-      setSearchField(e.target.value)
-    }
-
+    
     return (
         <div>
              <SearchBox
               placeholder = 'search category'
-              handleChange = { handleChange }
             />
         </div>
     )
